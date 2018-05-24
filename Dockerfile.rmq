@@ -1,0 +1,7 @@
+FROM rabbitmq:latest
+
+RUN rabbitmq-plugins enable --offline rabbitmq_management
+RUN rabbitmq-plugins enable --offline rabbitmq_stomp
+RUN rabbitmq-plugins enable --offline rabbitmq_web_stomp
+
+EXPOSE 4369	15672	5672	61613	61614	15674
